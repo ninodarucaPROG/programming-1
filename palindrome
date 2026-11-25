@@ -1,21 +1,22 @@
 #include <stdio.h> 
 int main() {
-int size = 6; 
-int numbers[size]; // Input 5 numbers
-  for(int i = 0; i < size; i++) {
-                                    printf("\nEnter a number %d/%d: ", i + 1,size);
-scanf("%d", &numbers[i]); 
+char size = 6; 
+char word[size]; // Input 5 numbers
+  for(char i = 0; i < size; i++) {
+                                    printf("\nEnter a word %d/%d: ", i + 1,size);
+scanf(" %c", &word[i]); 
   }                            printf("\nOriginal => "); 
-for(int i = 0; i < size; i++) { 
-printf("%d ", numbers[i]); 
+for(char i = 0; i < size; i++) { 
+printf(" %c", word[i]); 
 } 
 printf("\nReverse => "); 
-for(int i = size - 1; i >= 0; i--) { printf("%d ", numbers[i]);
+for(char i = size - 1; i >= 0; i--) {
+printf(" %c", word[i]);
 } 
-int tail = size - 1;
-int isPalindrome = 1;
-for(int head = 0; head < size / 2; head++) { 
-if(numbers[head] != numbers[tail]) { isPalindrome = 0;
+char tail = size - 1;
+char isPalindrome = 1;
+for(char head = 0; head < size / 2; head++) { 
+if(word[head] != word[tail]) { isPalindrome = 0;
 break; }
 tail--;
 } if(isPalindrome) { 
